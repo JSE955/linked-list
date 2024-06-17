@@ -21,4 +21,11 @@ class LinkedList
       temp.next_node = new_node
     end
   end
+
+  def prepend(value)
+    new_node = Node.new
+    new_node.value = value
+    new_node.next_node = head
+    self.head = new_node
+  end
 end
