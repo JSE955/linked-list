@@ -39,4 +39,14 @@ class LinkedList
     end
     count
   end
+
+  def tail
+    if head.nil?
+      'List is empty'
+    else
+      tail = head
+      tail = tail.next_node until tail.next_node.nil?
+      tail
+    end
+  end
 end
