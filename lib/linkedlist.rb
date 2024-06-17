@@ -81,8 +81,17 @@ class LinkedList
       temp.next_node = nil
       return popped_node
     end
-    
+  end
 
-
+  def contains?(value)
+    temp = head
+    until temp.nil?
+      if temp.value == value
+        return true
+      else
+        temp = temp.next_node
+      end
+    end
+    return false
   end
 end
