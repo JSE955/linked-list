@@ -49,4 +49,21 @@ class LinkedList
       tail
     end
   end
+
+  def at(index)
+    if index.zero?
+      head
+    else
+      count = 1
+      temp = head.next_node
+      until temp.nil?
+        if count == index
+          return temp
+        else
+          count += 1
+          temp = temp.next_node
+        end
+      end
+    end
+  end
 end
