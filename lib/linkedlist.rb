@@ -66,4 +66,23 @@ class LinkedList
       end
     end
   end
+
+  def pop
+    if head.nil?
+      return nil
+    elsif head.next_node.nil?
+      temp = head
+      self.head = nil
+      return temp
+    else
+      temp = head
+      temp = temp.next_node until temp.next_node.next_node.nil?
+      popped_node = temp.next_node
+      temp.next_node = nil
+      return popped_node
+    end
+    
+
+
+  end
 end

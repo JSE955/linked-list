@@ -5,9 +5,13 @@ test_list.append(100)
 test_list.append(200)
 test_list.append(300)
 
-p test_list.at(0)
-p test_list.at(1)
-p test_list.at(2)
-p test_list.at(3)
-p test_list.at(100)
+p test_list.pop
+p test_list.tail
+p test_list.pop
+p test_list.tail
+p test_list.pop
+p test_list.tail
+p test_list.pop
+p test_list.tail
+
 
