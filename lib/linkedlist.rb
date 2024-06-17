@@ -109,4 +109,13 @@ class LinkedList
     end
     return nil
   end
+
+  def to_s
+    temp = head
+    until temp.nil?
+      print "( #{temp.value} ) -> "
+      temp = temp.next_node
+    end
+    puts 'nil'
+  end
 end
