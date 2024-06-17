@@ -28,4 +28,15 @@ class LinkedList
     new_node.next_node = head
     self.head = new_node
   end
+
+  def size
+    0 if head.nil?
+    count = 0
+    temp = head
+    until temp.nil?
+      count += 1
+      temp = temp.next_node
+    end
+    count
+  end
 end
