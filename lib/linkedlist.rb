@@ -85,6 +85,7 @@ class LinkedList
 
   def contains?(value)
     temp = head
+    count = 0
     until temp.nil?
       if temp.value == value
         return true
@@ -93,5 +94,19 @@ class LinkedList
       end
     end
     return false
+  end
+
+  def find(value)
+    temp = head
+    count = 0
+    until temp.nil?
+      if temp.value == value
+        return count
+      else
+        count += 1
+        temp = temp.next_node
+      end
+    end
+    return nil
   end
 end
